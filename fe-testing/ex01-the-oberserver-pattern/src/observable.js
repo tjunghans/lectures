@@ -8,6 +8,10 @@ function Observable() {
 Observable.prototype = {
     constructor: Observable,
     addObserver: function(observer) {
+        if (typeof observer != "function") {
+            throw new TypeError("observer is not function");
+        }
+
         this.observers.push(observer);
     },
     hasObserver: function(observer) {
