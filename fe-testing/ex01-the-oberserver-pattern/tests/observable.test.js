@@ -58,19 +58,17 @@ describe('Observer', function() {
 
         // Listing 11.24
         it("test should pass through arguments", function() {
-                var observable = new Observable();
-                var actual;
+            var observable = new Observable();
+            var actual;
 
-                observable.addObserver(function() {
-                    actual = arguments;
-                });
+            observable.addObserver(function() {
+                actual = arguments;
+            });
 
-                observable.notifyObservers("String", 1, 32);
+            observable.notifyObservers("String", 1, 32);
 
-                assert.deepEqual(["String", 1, 32], Array.prototype.slice.call(actual));
-            }
-
-        );
+            assert.deepEqual(["String", 1, 32], Array.prototype.slice.call(actual));
+        });
 
         // Listing 11.26
         it("test should throw for uncallable observer", function() {
@@ -93,6 +91,28 @@ describe('Observer', function() {
             observable.addObserver(observer2);
             observable.notifyObservers();
             assert.equal(observer2.called, true);
+        });
+
+        // Listing 11.30
+        it("test should call observers in the order they were added", function() {
+            var observable = new Observable();
+
+            var calls = [];
+
+            var observer1 = function() {
+                calls.push(observer1);
+            };
+
+            var observer2 = function() {
+                calls.push(observer2);
+            };
+
+            observable.addObserver(observer1);
+            observable.addObserver(observer2);
+            observable.notifyObservers();
+
+            assert.equal(observer1, calls[0]);
+            assert.equal(observer2, calls[1]);
         });
     });
 });
