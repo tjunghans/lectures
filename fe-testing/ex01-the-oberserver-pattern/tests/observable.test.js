@@ -72,11 +72,27 @@ describe('Observer', function() {
 
         );
 
+        // Listing 11.26
         it("test should throw for uncallable observer", function() {
             var observable = new Observable();
             assert.throws(function() {
                 observable.addObserver({});
             }, "TypeError");
+        });
+
+        // Listing 11.28
+        it("test should notify all even when some fail", function() {
+            var observable = new Observable();
+            var observer1 = function() {
+                throw new Error("Oops");
+            };
+            var observer2 = function() {
+                observer2.called = true;
+            };
+            observable.addObserver(observer1);
+            observable.addObserver(observer2);
+            observable.notifyObservers();
+            assert.equal(observer2.called, true);
         });
     });
 });

@@ -24,7 +24,10 @@ Observable.prototype = {
     },
     notifyObservers: function() {
         for (var i = 0, numItems = this.observers.length; i < numItems; i++) {
-            this.observers[i].apply(this, arguments);
+            try {
+                this.observers[i].apply(this, arguments);
+            } catch (e) {}
+
         }
     }
 };
