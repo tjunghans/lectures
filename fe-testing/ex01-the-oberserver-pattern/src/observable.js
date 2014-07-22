@@ -2,7 +2,7 @@
 
 
 var observable = {
-    addObserver: function(observer) {
+    observe: function(observer) {
         if (typeof observer != "function") {
             throw new TypeError("observer is not function");
         }
@@ -26,7 +26,7 @@ var observable = {
         }
         return false;
     },
-    notifyObservers: function() {
+    notify: function() {
         if (!this.observers) {
             return;
         }

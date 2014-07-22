@@ -14,13 +14,13 @@ describe('Observer', function() {
 
     it('test should store function', function() {
         var observer = function() {};
-        this.observable.addObserver(observer);
+        this.observable.observe(observer);
         assert.equal(observer, this.observable.observers[0]);
     });
 
     it("test should return true when has observer", function() {
         var observer = function() {};
-        this.observable.addObserver(observer);
+        this.observable.observe(observer);
         assert.equal(this.observable.hasObserver(observer), true);
     });
 
@@ -32,8 +32,8 @@ describe('Observer', function() {
             function() {}
         ];
 
-        this.observable.addObserver(observers[0]);
-        this.observable.addObserver(observers[1]);
+        this.observable.observe(observers[0]);
+        this.observable.observe(observers[1]);
 
         assert.equal(this.observable.hasObserver(observers[0]), true);
         assert.equal(this.observable.hasObserver(observers[1]), true);
@@ -49,10 +49,10 @@ describe('Observer', function() {
             observer2.called = true;
         };
 
-        this.observable.addObserver(observer1);
-        this.observable.addObserver(observer2);
+        this.observable.observe(observer1);
+        this.observable.observe(observer2);
 
-        this.observable.notifyObservers();
+        this.observable.notify();
 
         assert.equal(observer1.called, true);
         assert.equal(observer2.called, true);
@@ -64,11 +64,11 @@ describe('Observer', function() {
 
         var actual;
 
-        this.observable.addObserver(function() {
+        this.observable.observe(function() {
             actual = arguments;
         });
 
-        this.observable.notifyObservers("String", 1, 32);
+        this.observable.notify("String", 1, 32);
 
         assert.deepEqual(["String", 1, 32], Array.prototype.slice.call(actual));
     });
@@ -76,7 +76,7 @@ describe('Observer', function() {
     // Listing 11.26
     it("test should throw for uncallable observer", function() {
         assert.throws(function() {
-            this.observable.addObserver({});
+            this.observable.observe({});
         }, "TypeError");
     });
 
@@ -88,9 +88,9 @@ describe('Observer', function() {
         var observer2 = function() {
             observer2.called = true;
         };
-        this.observable.addObserver(observer1);
-        this.observable.addObserver(observer2);
-        this.observable.notifyObservers();
+        this.observable.observe(observer1);
+        this.observable.observe(observer2);
+        this.observable.notify();
         assert.equal(observer2.called, true);
     });
 
@@ -106,9 +106,9 @@ describe('Observer', function() {
             calls.push(observer2);
         };
 
-        this.observable.addObserver(observer1);
-        this.observable.addObserver(observer2);
-        this.observable.notifyObservers();
+        this.observable.observe(observer1);
+        this.observable.observe(observer2);
+        this.observable.notify();
 
         assert.equal(observer1, calls[0]);
         assert.equal(observer2, calls[1]);
@@ -124,7 +124,7 @@ describe('Observer', function() {
         var observable = this.observable;
 
         assert.doesNotThrow(function() {
-            observable.notifyObservers();
+            observable.notify();
         });
     });
 
