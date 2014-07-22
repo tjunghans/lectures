@@ -1,12 +1,7 @@
 'use strict';
 
 
-function Observable() {
-
-}
-
-Observable.prototype = {
-    constructor: Observable,
+var observable = {
     addObserver: function(observer) {
         if (typeof observer != "function") {
             throw new TypeError("observer is not function");
@@ -23,7 +18,8 @@ Observable.prototype = {
             return false;
         }
 
-        for (var i = 0, numItems = this.observers.length; i < numItems; i++) {
+        var i, numItems = this.observers.length;
+        for (i = 0; i < numItems; i++) {
             if (this.observers[i] === observer) {
                 return true;
             }
@@ -35,7 +31,8 @@ Observable.prototype = {
             return;
         }
 
-        for (var i = 0, numItems = this.observers.length; i < numItems; i++) {
+        var i, numItems = this.observers.length;
+        for (i = 0; i < numItems; i++) {
             try {
                 this.observers[i].apply(this, arguments);
             } catch (e) {}
@@ -45,4 +42,4 @@ Observable.prototype = {
 };
 
 
-module.exports = Observable;
+module.exports = observable;
