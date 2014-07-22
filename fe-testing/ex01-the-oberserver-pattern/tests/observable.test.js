@@ -114,5 +114,19 @@ describe('Observer', function() {
             assert.equal(observer1, calls[0]);
             assert.equal(observer2, calls[1]);
         });
+
+        // Listing 11.33
+        it("test should return false when no observers", function() {
+            var observable = new Observable();
+            assert.ifError(observable.hasObserver(function() {}));
+        });
+
+        // Listing 11.34
+        it("test should not fail if no observers", function() {
+            var observable = new Observable();
+            assert.doesNotThrow(function() {
+                observable.notifyObservers();
+            });
+        });
     });
 });
