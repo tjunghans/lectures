@@ -2,7 +2,7 @@
 
 
 var observable = {
-    observe: function(observer) {
+    observe: function(event, observer) {
         if (typeof observer != "function") {
             throw new TypeError("observer is not function");
         }
@@ -13,7 +13,7 @@ var observable = {
 
         this.observers.push(observer);
     },
-    hasObserver: function(observer) {
+    hasObserver: function(event, observer) {
         if (!this.observers) {
             return false;
         }
@@ -26,15 +26,17 @@ var observable = {
         }
         return false;
     },
-    notify: function() {
+    notify: function(event) {
         if (!this.observers) {
             return;
         }
 
+        var args = Array.prototype.slice.call(arguments, 1);
+
         var i, numItems = this.observers.length;
         for (i = 0; i < numItems; i++) {
             try {
-                this.observers[i].apply(this, arguments);
+                this.observers[i].apply(this, args);
             } catch (e) {}
 
         }

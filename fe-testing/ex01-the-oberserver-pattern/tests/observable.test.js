@@ -12,16 +12,10 @@ describe('Observer', function() {
         this.observable = null;
     });
 
-    it('test should store function', function() {
-        var observer = function() {};
-        this.observable.observe(observer);
-        assert.equal(observer, this.observable.observers[0]);
-    });
-
     it("test should return true when has observer", function() {
         var observer = function() {};
-        this.observable.observe(observer);
-        assert.equal(this.observable.hasObserver(observer), true);
+        this.observable.observe('event', observer);
+        assert.equal(this.observable.hasObserver('event', observer), true);
     });
 
     // Listing 11.21
@@ -32,11 +26,11 @@ describe('Observer', function() {
             function() {}
         ];
 
-        this.observable.observe(observers[0]);
-        this.observable.observe(observers[1]);
+        this.observable.observe('event', observers[0]);
+        this.observable.observe('event', observers[1]);
 
-        assert.equal(this.observable.hasObserver(observers[0]), true);
-        assert.equal(this.observable.hasObserver(observers[1]), true);
+        assert.equal(this.observable.hasObserver('event', observers[0]), true);
+        assert.equal(this.observable.hasObserver('event', observers[1]), true);
     });
 
     // Listing 11.22
@@ -49,10 +43,10 @@ describe('Observer', function() {
             observer2.called = true;
         };
 
-        this.observable.observe(observer1);
-        this.observable.observe(observer2);
+        this.observable.observe('event', observer1);
+        this.observable.observe('event', observer2);
 
-        this.observable.notify();
+        this.observable.notify('event');
 
         assert.equal(observer1.called, true);
         assert.equal(observer2.called, true);
@@ -64,11 +58,11 @@ describe('Observer', function() {
 
         var actual;
 
-        this.observable.observe(function() {
+        this.observable.observe('event', function() {
             actual = arguments;
         });
 
-        this.observable.notify("String", 1, 32);
+        this.observable.notify('event', "String", 1, 32);
 
         assert.deepEqual(["String", 1, 32], Array.prototype.slice.call(actual));
     });
@@ -76,7 +70,7 @@ describe('Observer', function() {
     // Listing 11.26
     it("test should throw for uncallable observer", function() {
         assert.throws(function() {
-            this.observable.observe({});
+            this.observable.observe('event', {});
         }, "TypeError");
     });
 
@@ -88,9 +82,9 @@ describe('Observer', function() {
         var observer2 = function() {
             observer2.called = true;
         };
-        this.observable.observe(observer1);
-        this.observable.observe(observer2);
-        this.observable.notify();
+        this.observable.observe('event', observer1);
+        this.observable.observe('event', observer2);
+        this.observable.notify('event');
         assert.equal(observer2.called, true);
     });
 
@@ -106,9 +100,9 @@ describe('Observer', function() {
             calls.push(observer2);
         };
 
-        this.observable.observe(observer1);
-        this.observable.observe(observer2);
-        this.observable.notify();
+        this.observable.observe('event', observer1);
+        this.observable.observe('event', observer2);
+        this.observable.notify('event');
 
         assert.equal(observer1, calls[0]);
         assert.equal(observer2, calls[1]);
@@ -116,7 +110,7 @@ describe('Observer', function() {
 
     // Listing 11.33
     it("test should return false when no observers", function() {
-        assert.ifError(this.observable.hasObserver(function() {}));
+        assert.ifError(this.observable.hasObserver('event', function() {}));
     });
 
     // Listing 11.34
@@ -124,7 +118,7 @@ describe('Observer', function() {
         var observable = this.observable;
 
         assert.doesNotThrow(function() {
-            observable.notify();
+            observable.notify('event');
         });
     });
 
