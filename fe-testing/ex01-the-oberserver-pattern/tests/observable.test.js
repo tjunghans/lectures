@@ -4,12 +4,13 @@ var assert = require("assert");
 var observable = require("../src/observable");
 
 describe('Observer', function() {
-    before(function() {
+    beforeEach(function() {
         this.observable = Object.create(observable);
     });
 
-    after(function() {
+    afterEach(function() {
         this.observable = null;
+
     });
 
     it("test should return true when has observer", function() {
@@ -122,4 +123,16 @@ describe('Observer', function() {
         });
     });
 
+    // Listing 11.45
+    it("test should notify relevant observers only", function() {
+        var calls = [];
+        this.observable.observe("event", function() {
+            calls.push("event");
+        });
+        this.observable.observe("other", function() {
+            calls.push("other");
+        });
+        this.observable.notify("other");
+        assert.deepEqual(["other"], calls);
+    });
 });
