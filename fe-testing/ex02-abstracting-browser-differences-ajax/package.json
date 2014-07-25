@@ -17,7 +17,8 @@
         "xmlhttprequest": "^1.6"
     },
     "devDependencies": {
-        "mocha": "^1.2.0"
+        "mocha": "^1.2.0",
+        "sinon": "^1.10"
     },
     "engines": {
         "node": ">=0.6.21"

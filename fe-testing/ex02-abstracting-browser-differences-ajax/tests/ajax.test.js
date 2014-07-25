@@ -1,6 +1,7 @@
 'use strict';
 
 var assert = require("assert");
+var sinon = require("sinon");
 var ajax = require("../src/ajax");
 var tddjs = require("../../tdd");
 
@@ -16,6 +17,14 @@ describe('AjaxCreateTest', function() {
 });
 
 describe("GetRequestTest", function() {
+    beforeEach(function() {
+        this.ajaxCreate = ajax.create;
+    });
+
+    afterEach(function() {
+        ajax.create = this.ajaxCreate;
+    });
+
     it("test should define get method", function() {
         assert.equal(typeof ajax.get, 'function');
     });
@@ -24,5 +33,17 @@ describe("GetRequestTest", function() {
         assert.throws(function() {
             ajax.get();
         }, "TypeError");
-    })
+    });
+
+    it("test should obtain an XMLHttpRequest object", function() {
+
+        ajax.create = function() {
+            ajax.create.called = true;
+        };
+
+        ajax.get("/url");
+
+        assert.equal(ajax.create.called, true);
+
+    });
 });

@@ -37,6 +37,8 @@ var ajax = {
         if (typeof url != "string") {
             throw new TypeError("URL should be string");
         }
+
+        var transport = ajax.create();
     }
 };
 
