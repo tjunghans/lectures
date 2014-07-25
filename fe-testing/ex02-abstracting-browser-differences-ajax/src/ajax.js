@@ -33,7 +33,11 @@ var create;
 
 var ajax = {
     create: create,
-    get: function() {}
+    get: function get(url) {
+        if (typeof url != "string") {
+            throw new TypeError("URL should be string");
+        }
+    }
 };
 
 module.exports = ajax;

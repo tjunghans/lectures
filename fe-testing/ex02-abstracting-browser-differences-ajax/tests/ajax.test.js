@@ -21,7 +21,7 @@ describe("GetRequestTest", function() {
     });
 
     it("test should throw error without url", function() {
-        assert.ifError(function() {
+        assert.throws(function() {
             ajax.get();
         }, "TypeError");
     })
