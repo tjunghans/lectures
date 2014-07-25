@@ -18,11 +18,11 @@ describe('AjaxCreateTest', function() {
 
 describe("GetRequestTest", function() {
     beforeEach(function() {
-        this.ajaxCreate = ajax.create;
+        this.ajaxCreate = sinon.stub(ajax, 'create');
     });
 
     afterEach(function() {
-        ajax.create = this.ajaxCreate;
+        ajax.create.restore();
     });
 
     it("test should define get method", function() {
@@ -37,13 +37,9 @@ describe("GetRequestTest", function() {
 
     it("test should obtain an XMLHttpRequest object", function() {
 
-        ajax.create = function() {
-            ajax.create.called = true;
-        };
-
         ajax.get("/url");
 
-        assert.equal(ajax.create.called, true);
+        assert.equal(this.ajaxCreate.called, true);
 
     });
 });
