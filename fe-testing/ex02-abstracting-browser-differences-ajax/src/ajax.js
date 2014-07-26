@@ -39,6 +39,8 @@ var ajax = {
         }
 
         var transport = ajax.create();
+
+        transport.open("GET", url, true);
     }
 };
 

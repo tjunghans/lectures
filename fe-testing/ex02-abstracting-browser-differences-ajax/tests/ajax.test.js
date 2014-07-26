@@ -18,7 +18,15 @@ describe('AjaxCreateTest', function() {
 
 describe("GetRequestTest", function() {
     beforeEach(function() {
-        this.ajaxCreate = sinon.stub(ajax, 'create');
+
+        var openSpy = sinon.spy();
+        this.openSpy = openSpy;
+
+        this.ajaxCreate = sinon.stub(ajax, 'create', function() {
+            return {
+                open: openSpy
+            };
+        });
     });
 
     afterEach(function() {
@@ -41,5 +49,14 @@ describe("GetRequestTest", function() {
 
         assert.equal(this.ajaxCreate.called, true);
 
+    });
+
+    it("test should call open with method, url, async flag", function() {
+
+        var url = "/url";
+
+        ajax.get(url);
+
+        assert.deepEqual(["GET", url, true], this.openSpy.args[0]);
     });
 });
