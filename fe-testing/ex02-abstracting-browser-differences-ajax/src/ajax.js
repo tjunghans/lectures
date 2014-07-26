@@ -38,21 +38,31 @@ var get;
         return;
     }
 
-    get = function get(url) {
+    function requestComplete(transport, options) {
+        if (transport.status == 200) {
+            options.success(transport);
+        }
+    }
+
+    get = function get(url, options) {
         if (typeof url != "string") {
             throw new TypeError("URL should be string");
         }
 
         var transport = ajax.create();
 
-        transport.onreadystatechange = function() {};
-
         transport.open("GET", url, true);
+
+        transport.onreadystatechange = function() {
+            if (transport.readyState == 4) {
+                requestComplete(transport, options);
+            }
+        };
         transport.send();
-
     }
+}());
 
-}())
+
 
 var ajax = {
     create: create,
