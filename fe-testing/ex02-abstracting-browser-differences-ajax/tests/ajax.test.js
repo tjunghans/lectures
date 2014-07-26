@@ -101,4 +101,14 @@ describe("ReadyStateHandlerTest", function() {
 
         assert.equal(success.called, true);
     });
+
+    it("test should not throw error without success handler", function() {
+        var self = this;
+        this.xhr.readyState = 4;
+        this.xhr.status = 200;
+        ajax.get("/url");
+        assert.doesNotThrow(function() {
+            self.xhr.onreadystatechange();
+        });
+    });
 });
