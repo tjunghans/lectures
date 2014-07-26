@@ -5,7 +5,6 @@ var observable = require("../src/observable");
 
 describe('Observer', function() {
     beforeEach(function() {
-
         this.observable = Object.create(observable);
     });
 

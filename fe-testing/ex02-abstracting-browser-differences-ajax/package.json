@@ -1,0 +1,29 @@
+{
+    "name": "Ex02AbstractingBrowserDifferencesAjax",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tjunghans/lectures.git"
+    },
+    "author": "Thomas Junghans <thomas.junghans@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tjunghans/lectures/issues"
+    },
+    "homepage": "https://github.com/tjunghans/lectures",
+    "dependencies": {
+        "xmlhttprequest": "^1.6"
+    },
+    "devDependencies": {
+        "mocha": "^1.2.0",
+        "sinon": "^1.10"
+    },
+    "engines": {
+        "node": ">=0.6.21"
+    },
+    "scripts": {
+        "test": "make test"
+    }
+}
