@@ -1,9 +1,11 @@
 'use strict';
 
 var assert = require("assert");
+var extend = require('util')._extend;
 var sinon = require("sinon");
 var ajax = require("../src/ajax");
 var tddjs = require("../../tdd");
+var fakeXMLHttpRequest = require("../lib/fake-xhr.js");
 
 describe('AjaxCreateTest', function() {
     it("test should return XMLHttpRequest object", function() {
@@ -19,13 +21,12 @@ describe('AjaxCreateTest', function() {
 describe("GetRequestTest", function() {
     beforeEach(function() {
 
-        var openSpy = sinon.spy();
-        this.openSpy = openSpy;
+        var self = this;
+
+        this.xhr = extend({}, fakeXMLHttpRequest);
 
         this.ajaxCreate = sinon.stub(ajax, 'create', function() {
-            return {
-                open: openSpy
-            };
+            return self.xhr;
         });
     });
 
@@ -57,6 +58,6 @@ describe("GetRequestTest", function() {
 
         ajax.get(url);
 
-        assert.deepEqual(["GET", url, true], this.openSpy.args[0]);
+        assert.deepEqual(["GET", url, true], this.xhr.open.args[0]);
     });
 });
