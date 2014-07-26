@@ -45,7 +45,11 @@ var get;
 
         var transport = ajax.create();
 
+        transport.onreadystatechange = function() {};
+
         transport.open("GET", url, true);
+        transport.send();
+
     }
 
 }())

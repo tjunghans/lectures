@@ -60,4 +60,14 @@ describe("GetRequestTest", function() {
 
         assert.deepEqual(["GET", url, true], this.xhr.open.args[0]);
     });
+
+    it("test should add onreadystatechange handler", function() {
+        ajax.get("/url");
+        assert.equal(typeof this.xhr.onreadystatechange, 'function');
+    });
+
+    it("test should call send", function() {
+        ajax.get("/url");
+        assert.equal(this.xhr.send.called, true);
+    });
 });
