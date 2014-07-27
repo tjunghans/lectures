@@ -60,4 +60,55 @@ describe("GetRequestTest", function() {
 
         assert.deepEqual(["GET", url, true], this.xhr.open.args[0]);
     });
+
+    it("test should add onreadystatechange handler", function() {
+        ajax.get("/url");
+        assert.equal(typeof this.xhr.onreadystatechange, 'function');
+    });
+
+    it("test should call send", function() {
+        ajax.get("/url");
+        assert.equal(this.xhr.send.called, true);
+    });
+});
+
+describe("ReadyStateHandlerTest", function() {
+    beforeEach(function() {
+        var self = this;
+
+        this.xhr = extend({}, fakeXMLHttpRequest);
+
+        this.ajaxCreate = sinon.stub(ajax, 'create', function() {
+            return self.xhr;
+        });
+    });
+
+    afterEach(function() {
+        ajax.create.restore();
+    });
+
+    it("test should call success handler for status 200", function() {
+        this.xhr.readyState = 4;
+        this.xhr.status = 200;
+
+        var success = sinon.spy();
+
+        ajax.get("/url", {
+            success: success
+        });
+
+        this.xhr.onreadystatechange();
+
+        assert.equal(success.called, true);
+    });
+
+    it("test should not throw error without success handler", function() {
+        var self = this;
+        this.xhr.readyState = 4;
+        this.xhr.status = 200;
+        ajax.get("/url");
+        assert.doesNotThrow(function() {
+            self.xhr.onreadystatechange();
+        });
+    });
 });

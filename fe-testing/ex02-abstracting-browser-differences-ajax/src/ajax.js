@@ -31,17 +31,43 @@ var create;
     }
 }());
 
-var ajax = {
-    create: create,
-    get: function get(url) {
+var get;
+(function() {
+
+    if (!create) {
+        return;
+    }
+
+    function requestComplete(transport, options) {
+        if (transport.status == 200) {
+            if (typeof options.success == "function") {
+                options.success(transport);
+            }
+        }
+    }
+
+    get = function get(url, options) {
         if (typeof url != "string") {
             throw new TypeError("URL should be string");
         }
 
+        options = options || {};
         var transport = ajax.create();
 
         transport.open("GET", url, true);
+
+        transport.onreadystatechange = function() {
+            if (transport.readyState == 4) {
+                requestComplete(transport, options);
+            }
+        };
+        transport.send();
     }
+}());
+
+var ajax = {
+    create: create,
+    get: get
 };
 
 module.exports = ajax;
