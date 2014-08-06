@@ -1,6 +1,6 @@
 # Client Testing and Project Automation
 ## Contents
-- Introduction
+- [Introduction](introduction.md)
 - Frontend Testing
 - Writing testable JavaScript
 - Unit Testing
