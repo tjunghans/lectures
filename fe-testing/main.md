@@ -17,10 +17,6 @@ This is just enough time for an introduction to frontend testing and the first o
 
 
 
-## Frontend Testing
-Frontend testing depends on the...
-## No silver bullet
-
 ## Testable JavaScript
 Testing JavaScript is only possible or at least a lot easier if JavaScript functions and methods are written in a way that makes them easy to test. The best article about writing testable JavaScript that I have come across so far is [Writing testable JavaScript - by Rebecca Murphy](http://alistapart.com/article/writing-testable-javascript).
 
