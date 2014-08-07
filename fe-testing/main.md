@@ -1,7 +1,7 @@
 # Client Testing and Project Automation
 ## Contents
 - [Introduction](introduction.md)
-- Frontend Testing
+- [Frontend Testing](frontend-testing.md)
 - Writing testable JavaScript
 - Unit Testing
 - Functional Testing
@@ -10,23 +10,16 @@
 - Test Driven Development
 - Frameworks: Qunit, Jasmine, Mocha (Mochify), Chai, Sinon
 - Selenium
+- Automation with GruntJS
 
-- GruntJS
-
-## Introduction
 These notes are part of a four hour course on frontend testing which is divided into two hours of theory and two hours of practice.
 This is just enough time for an introduction to frontend testing and the first of many steps that will hopefully follow.
 
-### Goal
-The goal of this course is to show at least one way of testing frontend code, give an overview of available testing tools and frameworks and to
 
-### Reading material
-This course makes use of theory and examples from [Test-Driven JavaScript Development by Christian Johansen](http://tddjs.com/), a book I can highly recommend. Christian Johansen is also the creator of [Sinon.JS](http://sinonjs.org/), a JavaScript library for creating mocks, stubs and spies.
-
-### No silver bullet
 
 ## Frontend Testing
 Frontend testing depends on the...
+## No silver bullet
 
 ## Testable JavaScript
 Testing JavaScript is only possible or at least a lot easier if JavaScript functions and methods are written in a way that makes them easy to test. The best article about writing testable JavaScript that I have come across so far is [Writing testable JavaScript - by Rebecca Murphy](http://alistapart.com/article/writing-testable-javascript).
