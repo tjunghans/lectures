@@ -17,5 +17,6 @@ JavaScript, HTML and CSS combined - with DOM. These tests require a browser to t
 ## Unit and integration tests
 JavaScript on its own can be tested with unit tests. Unit tests are atomic and validate the functionality of a method or function. JavaScript and JavaScript - two or more module - that play together can be tested with integration tests.
 
+TODO: Include this http://blogs.msdn.com/b/raulperez/archive/2010/04/29/unit-testing-component-level-testing-and-ui-testing-what-to-use-and-when.aspx
 
 ## No silver bullet
