@@ -13,8 +13,8 @@ more than one JavaScript library, html and css. Component tests will verify that
 Any messaging to services or other components will be mocked or stubbed.
 
 **UI tests**
-These are high level tests to verify the user flow and interaction. This could be filling out a multi-step form with ajax
-validation.
+These are high level tests to verify the user flow and interaction. A user flow could be filling out a multi-step form with ajax
+validation. UI tests verify the combination of many components together using the actual user interactions such as mouse clicks and keyboard interactions.
 
 What can be tested and how?
 ### JavaScript class methods and functions
