@@ -20,7 +20,8 @@ btn.addEventListener('click', function () {
 
 ```
 In the above snippet the part that smells the most is the event listener:
-- Tight coupling between DOM and logic. Writing a unit test depends on the DOM.
+- There's no way to access the addition logic.
+- Tight coupling between DOM and logic.
 - The addition logic cannot be reused.
 
 Here is a better example that is easier to test ([JsFiddle](http://jsfiddle.net/tangibleJ/x8gsc34j/5/)):
@@ -46,3 +47,4 @@ Of course the above is a very simple example and more assertions could be added 
 
 ### References
 - <http://alistapart.com/article/writing-testable-javascript/>
+- <http://qunitjs.com/intro/#make-things-testable>
