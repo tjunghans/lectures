@@ -34,10 +34,10 @@ function add(a, b) {
 btn.addEventListener('click', function () {
     sum.textContent = add(addend1.value, addend2.value);
 });
-``
+```
 In the above snippet, the addition logic has been moved to its own function `add` with two arguments. The function `add` can be reused and tested.
 
 ```javascript
 assert.equal(add(1, 2), 3);
 assert.equal(add("1", "2"), 3);
-``
+```
