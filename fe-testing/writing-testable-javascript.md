@@ -40,9 +40,9 @@ In the above snippet, the addition logic has been moved to its own function `add
 ```javascript
 assert.equal(add(1, 2), 3); // true
 assert.equal(add("1", "2"), 3); // true
-``
-Of course the above is a very simple example and more assertions could be added to test against the number of arguments suplied or argument types. The second snippet shows how code becomes testable through separation of concerns and also improving the readability and usability.
+```
 
+Of course the above is a very simple example and more assertions could be added to test against the number of arguments suplied or argument types. The second snippet shows how code becomes testable through separation of concerns and also improving the readability and usability.
 
 ### References
 - <http://alistapart.com/article/writing-testable-javascript/>
