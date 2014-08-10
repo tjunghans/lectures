@@ -8,3 +8,5 @@ The lectures are:
 - [frontend performance optimization](https://github.com/tjunghans/lectures/tree/master/fe-performance/main.md)
 
 The lecture notes and examples are in english since english is the language of the software and frontend developer. The lecture notes are written in markdown on Github so that they can be versioned and improved online, even by a participant or the community using [pull requests](https://help.github.com/articles/using-pull-requests).
+
+If you have any questions feel free to contact me at thomas.junghans@gmail.com.
