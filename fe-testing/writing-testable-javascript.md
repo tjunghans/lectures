@@ -19,4 +19,25 @@ btn.addEventListener('click', function () {
 });
 
 ```
+In the above snippet the part that smells the most is the event listener:
+- Tight coupling between DOM and logic. Writing a unit test depends on the DOM.
+- The addition logic cannot be reused.
 
+Here is a better example that is easier to test ([JsFiddle](http://jsfiddle.net/tangibleJ/x8gsc34j/5/)):
+
+```javascript
+...
+function add(a, b) {
+	return Number(a) + Number(b);
+}
+
+btn.addEventListener('click', function () {
+    sum.textContent = add(addend1.value, addend2.value);
+});
+``
+In the above snippet, the addition logic has been moved to its own function `add` with two arguments. The function `add` can be reused and tested.
+
+```javascript
+assert.equal(add(1, 2), 3);
+assert.equal(add("1", "2"), 3);
+``
