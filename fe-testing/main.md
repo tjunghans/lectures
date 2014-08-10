@@ -2,7 +2,7 @@
 ## Contents
 - [Introduction](introduction.md)
 - [Frontend Testing](frontend-testing.md)
-- Writing testable JavaScript
+- [Writing testable JavaScript](writing-testable-javascript.md)
 - Unit Testing
 - Functional Testing
 - E2E/Integration Testing
