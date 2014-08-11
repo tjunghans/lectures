@@ -3,14 +3,15 @@
 - [Introduction](introduction.md)
 - [Frontend Testing](frontend-testing.md)
 - [Writing testable JavaScript](writing-testable-javascript.md)
-- Unit Testing
-- Functional Testing
-- E2E/Integration Testing
-- Behaviour Driven Testing (BDD)
-- Test Driven Development
-- Frameworks: Qunit, Jasmine, Mocha (Mochify), Chai, Sinon
+- [Unit Test](unit-test.md)
+- [Component Test](component-test.md)
+- [UI Test](ui-test.md)
+- [Behaviour Driven Testing (BDD)](bdd.md)
+- [Test Driven Development (TDD)](tdd.md)
+- [frameworks, test runner and tools](tools.md)
 - Selenium
-- Automation with GruntJS
+- Automation
+- Exercises
 
 These notes are part of a four hour course on frontend testing which is divided into two hours of theory and two hours of practice.
 This is just enough time for an introduction to frontend testing and the first of many steps that will hopefully follow.
