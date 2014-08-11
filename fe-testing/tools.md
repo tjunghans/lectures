@@ -8,13 +8,16 @@ The best is to play around with all of them and pick your favourite and what wor
 ### Unit testing
 - [Jasmine](http://jasmine.github.io/2.0/introduction.html)
 - [QUnit](http://qunitjs.com/)
-- Mocha
+- [Mocha](http://visionmedia.github.io/mocha/)
 
 #### Jasmine
-Jasmine is a behaviour driven testing framework for JavaScript. Jasmine runs tests in the browser. There is a node plugin which enables Jasmine to run in node.
+Jasmine is a behaviour driven testing framework for JavaScript. Jasmine runs tests in the browser, just like QUnit. There is also a node plugin, [jasmine-node](https://github.com/mhevery/jasmine-node).
 
 #### QUnit
 QUnit is jQuery's testing framework. QUnit is an independent framework and does not require jQuery or any other library to run. QUnit is easy to use and it is similar to Jasmine without the BDD syntax.
+
+#### Mocha
+Mocha is my framework of choice. It's written for Node JS but can be used to test JavaScript in the browser in conjunction with the node package mochify.
 
 ### Component Testing
 - Mocha running tests with Node. Use [mochify](https://www.npmjs.org/package/mochify) to run tests in the frontend. Mochify uses Browserify,  Selenium, PhantomJS and Mocha to run tests in the frontend as well.
@@ -26,3 +29,8 @@ Component and UI testing could use the same tools, but selenium is relatively sl
 - Selenium
 - Mocha
 - [NightwatchJS](http://nightwatchjs.org/)
+
+### Stubbing, Moching and Spies
+I recommend [Sinon](http://sinonjs.org/), which is a dedicated library and very powerful. Sinon is a project by Christian Johansen, the author of [Test-Driven JavaScript Development](http://tddjs.com/).
+
+
