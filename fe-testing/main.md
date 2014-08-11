@@ -1,5 +1,5 @@
 # Client Testing and Project Automation
-## Contents
+## Agenda
 - [Introduction](introduction.md)
 - [Frontend Testing](frontend-testing.md)
 - [Writing testable JavaScript](writing-testable-javascript.md)
@@ -8,15 +8,13 @@
 - [UI Test](ui-test.md)
 - [Behaviour Driven Testing (BDD)](bdd.md)
 - [Test Driven Development (TDD)](tdd.md)
-- [frameworks, test runner and tools](tools.md)
+- [Tools](tools.md)
 - Selenium
 - Automation
 - Exercises
 
 These notes are part of a four hour course on frontend testing which is divided into two hours of theory and two hours of practice.
 This is just enough time for an introduction to frontend testing and the first of many steps that will hopefully follow.
-
-
 
 ## Testable JavaScript
 Testing JavaScript is only possible or at least a lot easier if JavaScript functions and methods are written in a way that makes them easy to test. The best article about writing testable JavaScript that I have come across so far is [Writing testable JavaScript - by Rebecca Murphy](http://alistapart.com/article/writing-testable-javascript).
