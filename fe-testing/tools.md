@@ -1,12 +1,20 @@
 ## Tools
 Tools covers frameworks, test runners and any other plugins or utilities that aid in writing, running and displaying tests. Currently there are plenty of tools available but no real standard way of doing things.
 
-My personal suggestion of tools for different levels of testing:
+My personal suggestion of tools for different levels of testing are listed below. There is no official list of pros and cons and I cannot tell you which is best, but I do know what works. The choice of tools depends on the type of website you are testing and the technologies in use. You may not want to introduce or feel comfortable with NodeJS. You may be working with a content driven website such as a cms or a web application with an mvc architecture.
+
+The best is to play around with all of them and pick your favourite and what works for your code.
 
 ### Unit testing
-- Jasmine
-- QUnit
+- [Jasmine](http://jasmine.github.io/2.0/introduction.html)
+- [QUnit](http://qunitjs.com/)
 - Mocha
+
+#### Jasmine
+Jasmine is a behaviour driven testing framework for JavaScript. Jasmine runs tests in the browser. There is a node plugin which enables Jasmine to run in node.
+
+#### QUnit
+QUnit is jQuery's testing framework. QUnit is an independent framework and does not require jQuery or any other library to run. QUnit is easy to use and it is similar to Jasmine without the BDD syntax.
 
 ### Component Testing
 - Mocha running tests with Node. Use [mochify](https://www.npmjs.org/package/mochify) to run tests in the frontend. Mochify uses Browserify,  Selenium, PhantomJS and Mocha to run tests in the frontend as well.
