@@ -5,10 +5,10 @@
 - [Writing testable JavaScript](writing-testable-javascript.md)
 - [Unit Test](unit-test.md)
 - [Component Test](component-test.md)
-- [UI Test](ui-test.md)
+- [UI Test](articles/ui-test.md)
 - [Behaviour Driven Testing (BDD)](bdd.md)
 - [Test Driven Development (TDD)](tdd.md)
-- [Tools](tools.md)
+- [Tools](articles/tools.md)
 - Selenium
 - Automation
 - Exercises
