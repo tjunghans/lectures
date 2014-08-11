@@ -6,6 +6,7 @@ Tools cover
 
 Currently there are plenty of tools available but no real standard way of doing things.
 
+### Personal suggestion
 My personal suggestion of tools for different levels of testing are listed below. There is no official list of pros and cons and I cannot tell you which is best, but I do know what works. The choice of tools depends on the type of website you are testing and the technologies in use. You may not want to introduce or feel comfortable with NodeJS. You may be working with a content driven website such as a cms or a web application with an mvc architecture.
 
 The best is to play around with all of them and pick your favourite and what works for your code.
