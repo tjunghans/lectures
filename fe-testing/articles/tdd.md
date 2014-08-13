@@ -1,1 +1,2 @@
 # Test Driven Development (TDD)
+Writing tests first is a big aid in the design of production code because one only implements what is needed. A first assertion will check if the method is available. A second may test for the correct arguments. Another for the expected return value and so on. Writing assertions step by step and only writing the minimum amount of code to make the test go green, will keep the production code lean. Less code means less to debug and improved readability.
