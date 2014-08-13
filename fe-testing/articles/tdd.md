@@ -15,5 +15,7 @@ A first assertion will check if the method is available. A second may test for t
 ## Writing better unit tests
 In the last chapter of his book [Test-Driven JavaScript Development](http://www.tddjs.com), Christian Johansen has tips on writing better unit tests.
 
-- Improve readability by clearly stating the intent of the test. Keep tests small and simple. This also goes for production code.
+- Improve readability by clearly stating the intent of the test.
+- Keep tests small and simple. This also goes for production code.
 - A good test suite (collection of unit tests) should serve as a documentation for the production code being tested.
+- Name the test clearly. If you are using bdd then keep the requirement as short and precise. eg. "it should `verb goes here` something".
