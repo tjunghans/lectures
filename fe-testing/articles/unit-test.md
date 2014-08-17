@@ -4,11 +4,11 @@ Unit-tests are the most atomic, cheapest and fastest running tests. They should 
 ##  Let's get coding and testing
 We will write a simple `Time` library that can take hours and minutes as arguments and perform simple time calculation and formatting actions.
 
-*Testing-Tools**
+**Testing-Tools**
 - Mocha (Node or [in the browser](http://visionmedia.github.io/mocha/#browser-support)
 - Assert (Node Assert or [Chai Assert](http://chaijs.com/guide/styles/#assert) in the browser)
 
-To keep the example simple, no other libraries will be used. The `Time` library and tests will be demonstrated with jsFiddle.
+To keep the example simple, no other libraries will be used. The `Time` library and tests will be demonstrated with [jsfiddle](http://jsfiddle.net).
 
 **HTML Contents**
 
