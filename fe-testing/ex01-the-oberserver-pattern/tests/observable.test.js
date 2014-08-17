@@ -13,6 +13,7 @@ describe('Observer', function() {
 
     });
 
+    // Listing 11.15
     it("test should return true when has observer", function() {
         var observer = function() {};
         this.observable.observe('event', observer);
