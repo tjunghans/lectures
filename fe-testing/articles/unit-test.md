@@ -21,29 +21,68 @@ This never changes throughout this example.
 **jsFiddle JavaScript**
 
 ```javascript
+// Library
+(function (namespace) {
+    'use strict';
+
+    // Private helpers
+    function hoursToSeconds(hours) {
+        return hours * 3600;
+    }
+
+    // Constructor
+    function Time() {
+
+    }
+
+    // Methods
+    Time.prototype = {
+        constructor: Time
+    };
+
+    namespace.Time = Time;
+}(window));
+
+
+// Tests
 mocha.setup('bdd');
 var assert = chai.assert;
 
 describe('Time', function () {
 
+    it('has a constructor', function () {
+    	// assert.equal(true, true);
+    });
+
+    it('takes hours as argument', function () {
+
+    });
+
+    it('takes hours and optionally minutes as arguments', function () {
+
+    });
+
+    it('can return time in seconds', function () {
+
+    });
+
+    it('can return time in days', function () {
+
+    });
+
+    it('can return time in work days', function () {
+
+    });
+
+    it('can add time', function () {
+
+    });
 });
+
+mocha.run();
 ```
 
-**Step 1: The constructor**
 
-**Test**:
-```javascript
-it('has a constructor', function () {
-      assert(new Time());
-});
-```
-
-**Production code**
-```javascript
-function Time(h, m) {
-
-}
-```
 
 
 ## Done and tested
