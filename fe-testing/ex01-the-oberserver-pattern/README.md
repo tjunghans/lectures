@@ -12,7 +12,7 @@ TDD by writing an observer pattern library. This is an exercise taken out of the
 3. When everything is installed, run `make` or `make test` to run the tests.
 
 ## Explanation
-Unlike in the example in the book, the Observer-library is written in the context of NodeJS and the tests are written with Mocha and [Assert](http://nodejs.org/api/assert.html). This is probably the easiest way to write tests with Mocha.
+Unlike in the example in the book, the Observer-library is written in the context of NodeJS and the tests are written with Mocha and [Assert](http://nodejs.org/api/assert.html).The reason for  is probably the easiest way to write tests with Mocha.
 
 
 
