@@ -43,7 +43,7 @@ it('has a constructor', function () {
 function Time(h, m) {
 
 }
-``
+```
 
 
 ## Done and tested
