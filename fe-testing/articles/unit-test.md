@@ -16,6 +16,31 @@ To keep the example simple, no other libraries will be used. The `Time` library 
 <div id="mocha"></div>
 ```
 
+```javascript
+mocha.setup('bdd');
+var assert = chai.assert;
+
+describe('Time', function () {
+
+});
+```
+
+**Step 1: The constructor
+
+**Test**:
+```javascript
+it('has a constructor', function () {
+      assert(new Time());
+});
+```
+
+**Production code**
+```javascript
+function Time(h, m) {
+
+}
+```
+
 
 ## Done and tested
 There is a [fiddle](http://jsfiddle.net/tangibleJ/t1qmgp1m/6/) with the `Time` library and the unit tests.
