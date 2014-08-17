@@ -10,11 +10,14 @@ We will write a simple `Time` library that can take hours and minutes as argumen
 
 To keep the example simple, no other libraries will be used. The `Time` library and tests will be demonstrated with [jsfiddle](http://jsfiddle.net).
 
-**HTML Contents**
+**jsFiddle HTML**
+This never changes throughout this example.
 
 ```html
 <div id="mocha"></div>
 ```
+
+**jsFiddle JavaScript**
 
 ```javascript
 mocha.setup('bdd');
@@ -25,7 +28,7 @@ describe('Time', function () {
 });
 ```
 
-**Step 1: The constructor
+**Step 1: The constructor**
 
 **Test**:
 ```javascript
@@ -39,7 +42,7 @@ it('has a constructor', function () {
 function Time(h, m) {
 
 }
-```
+``
 
 
 ## Done and tested
