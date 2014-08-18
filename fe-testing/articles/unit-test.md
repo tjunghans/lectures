@@ -10,6 +10,16 @@ the production code being tested is too complex or large.
 
 **...easy too understand**. A unit test suite (collection of unit tests) should act as a documentation for the class being tested and easy to understand.
 
+## When to write unit tests
+- Write tests for a function before implementing it (tdd).
+- Write tests before refactoring a function. Refactoring is a lot easier when there are tests to back you up. Writing tests can be hard when dealing with old code or code that wasn't written in a testable way.
+
+## Tipps when testing frontend
+- Keep things small and granular. This goes for functions/methods and tests.
+- Limit DOM access in your unit tests. DOM access is relatively slow and modifying html is a pain.
+- Avoid fixtures. They are a pain.
+- Don't test code that has already been tested. Don't test `$.ajax` or `$('button').on('click')` . This goes for any popular library, not just jQuery. If you are using a third party that doesn't have tests, well - then you maybe souldn't be using it.
+
 ##Unit test structure
 Divide a unit test into three blocks to improve readability:
 1. Setup
@@ -119,6 +129,8 @@ mocha.run();
 
 ## Done and tested
 There is a [fiddle](http://jsfiddle.net/tangibleJ/t1qmgp1m/6/) with the `Time` library and the unit tests.
+
+
 
 
 
