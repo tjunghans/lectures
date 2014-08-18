@@ -54,7 +54,7 @@ To keep the example simple, no other libraries will be used.
 
 **HTML**
 
-This never changes throughout this example.
+(Yup, that's it!)
 
 ```html
 <div id="mocha"></div>
