@@ -1,5 +1,34 @@
 # Unit-Testing
-Unit-tests are the most atomic, cheapest and fastest running tests. They should be fast running. If a unit-test doesn't complete within milliseconds then the test or the code being tested needs to be questioned. Another reason for slow performance may be the testing framework (Qunit, Jasmine, Mocha, etc)., but this will only be visible with a very high number of tests.
+Unit-tests are the most atomic tests. Unit tests are there to test functions, methods and states of a class.
+
+Unit tests should be...
+
+**...easy to write**. If not, then the function that the tests are for is probably too big, to complex or not written in a testable manner.
+**...fast running**. All unit tests should run within milliseconds. If this is not the case or a unit test takes longer, it is either doing too much or then the production code being tested is probably too complex or your function too large.
+**...easy too understand**. A unit test suite (collection of unit tests) should act as a documentation for the class being tested and easy to understand.
+
+##Unit test structure
+Divide a unit test into three blocks to improve readability:
+1. Setup
+2. Exercise
+3. Verify
+
+Here is a simple example:
+```javascript
+it('can add to numbers together', function () {
+	// Setup
+	var calc = new Calculator();
+	var a = 2;
+	var b = 3;
+
+	// Exercise
+	var result = calc.add(a, b);
+
+	// Verify
+	assert.equal(result, 5);
+});
+```
+
 
 ##  Let's get coding and testing
 We will write a simple `Time` library that can take hours and minutes as arguments and perform simple time calculation and formatting actions.
