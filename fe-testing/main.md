@@ -1,4 +1,7 @@
 # Client Testing and Project Automation
+
+> As rich Web application complexity grows, if you want to keep your sanity, you need to unit test your frontend JavaScript code.
+
 ## Agenda
 - [Introduction](articles/introduction.md)
 - [Frontend Testing](articles/frontend-testing.md)
