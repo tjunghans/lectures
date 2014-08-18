@@ -50,9 +50,9 @@ We will write a simple `Time` library that can take hours and minutes as argumen
 - Mocha (Node or [in the browser](http://visionmedia.github.io/mocha/#browser-support))
 - Assert (Node Assert or [Chai Assert](http://chaijs.com/guide/styles/#assert) in the browser)
 
-To keep the example simple, no other libraries will be used. The `Time` library and tests will be demonstrated with [jsfiddle](http://jsfiddle.net).
+To keep the example simple, no other libraries will be used.
 
-**jsFiddle HTML**
+**HTML**
 
 This never changes throughout this example.
 
@@ -60,7 +60,7 @@ This never changes throughout this example.
 <div id="mocha"></div>
 ```
 
-**jsFiddle JavaScript**
+**JavaScript**
 
 ```javascript
 // Library
