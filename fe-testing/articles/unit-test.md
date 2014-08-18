@@ -14,7 +14,7 @@ the production code being tested is too complex or large.
 - Write tests for a function before implementing it (tdd).
 - Write tests before refactoring a function. Refactoring is a lot easier when there are tests to back you up. Writing tests can be hard when dealing with old code or code that wasn't written in a testable way.
 
-## Tipps when testing frontend
+## Tips when testing frontend
 - Keep things small and granular. This goes for functions/methods and tests.
 - Limit DOM access in your unit tests. DOM access is relatively slow and modifying html is a pain.
 - Avoid fixtures. They are a pain.
@@ -50,7 +50,9 @@ We will write a simple `Time` library that can take hours and minutes as argumen
 - Mocha (Node or [in the browser](http://visionmedia.github.io/mocha/#browser-support))
 - Assert (Node Assert or [Chai Assert](http://chaijs.com/guide/styles/#assert) in the browser)
 
-To keep the example simple, no other libraries will be used.
+To keep the example simple, no other libraries will be used. There is some boilerplate code below. The implementation of `Time` and the assertions are missing.
+
+Tip: Create a [fiddle](http://jsfiddle.net/).
 
 **HTML**
 
@@ -123,9 +125,6 @@ describe('Time', function () {
 
 mocha.run();
 ```
-
-
-
 
 ## Done and tested
 There is a [fiddle](http://jsfiddle.net/tangibleJ/t1qmgp1m/6/) with the `Time` library and the unit tests.
