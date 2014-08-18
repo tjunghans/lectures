@@ -5,8 +5,8 @@ Unit tests should be...
 
 **...easy to write**. If not, then the function that the tests are for is probably too big, to complex or not written in a testable manner.
 
-**...fast running**. All unit tests should run within milliseconds. If this is not the case or a unit test takes longer, it is either doing too much or then
-the production code being tested is probably too complex or your function too large.
+**...fast running**. All unit tests should run within milliseconds. If this is not the case or a unit test takes longer, it is either doing too much, the
+the production code being tested is too complex or large.
 
 **...easy too understand**. A unit test suite (collection of unit tests) should act as a documentation for the class being tested and easy to understand.
 
