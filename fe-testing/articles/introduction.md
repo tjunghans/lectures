@@ -20,4 +20,4 @@ The goal of this course is to discuss the above points and to show at one way of
 This course makes use of theory and examples from [Test-Driven JavaScript Development by Christian Johansen](http://tddjs.com/), a book I can highly recommend. Christian Johansen is also the creator of [Sinon.JS](http://sinonjs.org/), a JavaScript library for creating mocks, stubs and spies.
 
 ## Next
-[Frontend Testing](frontend-testing.md)
+[Testing Basics](testing-basics.md)
