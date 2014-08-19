@@ -29,7 +29,7 @@ function assert(statement, message) {
 	}
 }
 ```
-[jsFiddle example](http://jsfiddle.net/tangibleJ/8apt9ag9/)
+[jsFiddle example](http://jsfiddle.net/tangibleJ/8apt9ag9/1/)
 
 ## Red and Green
 
