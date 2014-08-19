@@ -4,6 +4,7 @@
 
 ## Agenda
 - [Introduction](articles/introduction.md)
+- [Tesing Basics](articles/testing-basics.md)
 - [Frontend Testing](articles/frontend-testing.md)
 - [Writing testable JavaScript](articles/writing-testable-javascript.md)
 - [Unit Test](articles/unit-test.md)
