@@ -1,5 +1,5 @@
 # Testing Basics
-This article covers the basics very quickly. Most of it is derived from [Christian Johansen's excellent book, Test-Driven JavaScript Development](http://tddjs.com).
+This article covers the basics very quickly. Most of it is derived from [Christian Johansen's excellent book, Test-Driven JavaScript Development](http://tddjs.com) and summarized.
 
 Following now are some terms that you should become familiar with when testing.
 
@@ -10,9 +10,6 @@ Following now are some terms that you should become familiar with when testing.
 - no test should depend on another test
 - dependencies need sometimes be mocked or stubbed
 - should be runnable at any time
-
-Source: Christian Johansen, http://tddjs.com
-
 
 ## Assertions
 
