@@ -10,9 +10,26 @@ Following now are some terms that you should become familiar with when testing.
 - no test should depend on another test
 - dependencies need sometimes be mocked or stubbed
 - should be runnable at any time
+	+ when implementation is completed
+	+ after changes are made
+	+ when new components are added
 
 ## Assertions
+- the heart of a unit test
+- is a boolean-valued function, that shows the intended state of a system
+- used in unit tests to perform checks i.e if something is true or another expected value
+- if the assertion fails, the test is aborted
 
+A simple assertion:
+
+```javascript
+function assert(statement, message) {
+	if (!statement) {
+		throw new Error(message);
+	}
+}
+```
+[jsFiddle example](http://jsfiddle.net/tangibleJ/8apt9ag9/)
 
 ## Red and Green
 
