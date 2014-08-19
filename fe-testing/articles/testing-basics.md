@@ -27,13 +27,23 @@ function assert(statement, message) {
 	if (!statement) {
 		throw new Error(message);
 	}
+	return true;
 }
 ```
 [jsFiddle example](http://jsfiddle.net/tangibleJ/8apt9ag9/1/)
 
 ## Red and Green
+- failed tests are referred to as red
+- successful tests are reffered to as green
 
+## Test Functions, Cases and Suites
+- A test function exercises one unit of code and consists of one or more assertions
+- A test case is a set of related test functions
+- In larger systems one or more test cases are grouped in test suites
 
+## Setup and Teardown
 
+## Integration tests
 
+Next:
 [Frontend Testing](frontend-testing.md)
