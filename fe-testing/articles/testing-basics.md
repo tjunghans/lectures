@@ -1,5 +1,5 @@
 # Testing Basics
-This article covers the basics very quickly. Most of it is taken from [Christian Johansen's book, Test-Driven JavaScript Development](http://tddjs.com).
+This article covers the basics very quickly. Most of it is derived from [Christian Johansen's excellent book, Test-Driven JavaScript Development](http://tddjs.com).
 
 ## The Unit Test
 >The unit test is a piece of code that tests a piece of production code.
