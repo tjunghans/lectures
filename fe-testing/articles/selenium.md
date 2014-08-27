@@ -23,17 +23,22 @@ The WebdriverJS language binding allows to communciate with the Webdriver API us
 
 We will have a look at the [latter](http://webdriver.io/).
 
-### WebdriverJS and WebdriverJS confusion
+### WebdriverJS confusion
 Don't get confused by
 - the [official WebdriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs) with the node package [selenium-webdriver](https://www.npmjs.org/package/selenium-webdriver) and
 - [webdriverjs](https://www.npmjs.org/package/webdriverjs) with it's website at [Webdriver.io](http://webdriver.io/).
 
 They both have the same goal, but reach it differently. Also have a look at [this thread](https://github.com/webdriverio/webdriverio/issues/138) on Github explaining the differences.
 
-## Webdriver.io, Assert and Mocha
-From now on, when we speak of WebdriverJS we mean the version from Webdriver.io.
+### WebdriverIO update
+Until [recently](https://twitter.com/webdriverio/status/486277447718297601) the WebdriverIO node package went under [webdriverjs](https://www.npmjs.org/package/webdriverjs). This is now deprecated and replaced by [webdriverio](https://www.npmjs.org/package/webdriverio).
 
-There i
+## Webdriver.io, Assert and Mocha
+
+
+
+
+https://github.com/tjunghans/learning-webdriverjs
 
 
 
