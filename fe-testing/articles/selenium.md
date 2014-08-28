@@ -33,11 +33,14 @@ They both have the same goal, but reach it differently. Also have a look at [thi
 ### WebdriverIO update
 Until [recently](https://twitter.com/webdriverio/status/486277447718297601) the WebdriverIO node package went under [webdriverjs](https://www.npmjs.org/package/webdriverjs). This is now deprecated and replaced by [webdriverio](https://www.npmjs.org/package/webdriverio).
 
+## Webdriver.io installation
+This is a step by step guide to get Webdriver.io up and running.
+
+1. Start with the [Webdriver.io Guide](http://webdriver.io/guide.html) as a quickstart.
+2. Read the [installation instructions](http://webdriver.io/guide/getstarted/install.html) to get selenium up and running. You can also use the node package [selenium-standalone](https://www.npmjs.org/package/selenium-standalone) to run selenium.
+3. At the time of writing the [examples on Github were outdated](https://github.com/webdriverio/webdriverio/tree/master/examples) and aimed at the old WebdriverJS. Instead we'll look at an example I created.
+
 ## Webdriver.io, Assert and Mocha
-
-
-
-
 https://github.com/tjunghans/learning-webdriverjs
 
 
