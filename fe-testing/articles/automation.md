@@ -3,3 +3,5 @@
 
 There is an excellent article on [task automation with npm run](http://substack.net/task_automation_with_npm_run) and making use of `bash` and [make (Makefile)](http://mrbook.org/blog/tutorials/make/).
 
+In the [learning-webdriverjs](https://github.com/tjunghans/learning-webdriverjs) project there is an example of a [Makefile](https://github.com/tjunghans/learning-webdriverjs/blob/master/Makefile) and [package.json](https://github.com/tjunghans/learning-webdriverjs/blob/master/package.json).
+
