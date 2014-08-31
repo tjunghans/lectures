@@ -5,3 +5,9 @@ There is an excellent article on [task automation with npm run](http://substack.
 
 In the [learning-webdriverjs](https://github.com/tjunghans/learning-webdriverjs) project there is an example of a [Makefile](https://github.com/tjunghans/learning-webdriverjs/blob/master/Makefile) and [package.json](https://github.com/tjunghans/learning-webdriverjs/blob/master/package.json).
 
+## References
+- http://substack.net/task_automation_with_npm_run
+- http://anders.janmyr.com/2014/03/running-scripts-with-npm.html
+- https://www.npmjs.org/doc/cli/npm-run-script.html
+- http://mrbook.org/blog/tutorials/make/
+

@@ -17,9 +17,22 @@ These are high level tests to verify the user flow and interaction. A user flow 
 validation. UI tests verify the combination of many components together using the actual user interactions such as mouse clicks and keyboard interactions.
 
 ## Testing-Strategy
-Try to cover as many tests with **unit tests** since unit tests are fast. TDD helps to achieve this.
+### Unit Tests
+Try to cover as many tests with **unit tests** since unit tests are fast. TDD helps to achieve this. You will typicaly write unit tests for functions and methods, controller logic. Only test the api, that is, functions that are public. Any methods that aren't for the outside world should be kept private (see [black box driven development](https://hacks.mozilla.org/2014/08/black-box-driven-development-in-javascript/)) and do not need testing. They will be tested transitively.
 
+**Example: API exposure**
+```javascript
+// TODO: Create example 10.9.2014
+```
+
+### Component Tests
 When DOM is required you will write **component tests**. Testing with the DOM means you will either mock the DOM or use a headless browser such as [PhantomJS](http://phantomjs.org/) (and a [helper](http://casperjs.org/)) or Selenium using PhantomJS. There's a [list of headless web browsers](https://gist.github.com/evandrix/3694955) on Github.
+The reason for using a headless browser is because it's faster than opening up normal browser with a gui.
+
+Unit and component tests will run on every change - with every save - meaning, they have to be fast!
+
+### Integration Tests
+Integration tests or UI tests test components playing together using browser automation to automate the user flow. These tests will run once or twice a day or maybe even overnight because they are slow and take time. UI tests will use Selenium for browser automation, just like component tests, but with all systems (database, authorization, etc) being used.
 
 ## Reference
 - <http://blogs.msdn.com/b/raulperez/archive/2010/04/29/unit-testing-component-level-testing-and-ui-testing-what-to-use-and-when.aspx>
