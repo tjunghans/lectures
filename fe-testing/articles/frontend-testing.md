@@ -1,5 +1,5 @@
 #Frontend Testing
-Frontend can be JavaScript or JavaScript in combination with HTML and CSS. It makes sense to organize the frontend into modules (or components, widgets) instead of entire web pages. Anything that can be independently reused should be a module. Each module is tested separately and also in conjunction with other modules, to test a flow.
+Frontend can be JavaScript or JavaScript in combination with HTML and CSS. It makes sense to organize the frontend into modules or components instead of entire web pages. Anything that can be independently reused should be a module. Each module is tested separately and also in conjunction with other modules, to test a flow.
 
 ## Unit, Component and UI tests
 When writing tests for web frontends you will be writing tests on different levels. These levels are **unit**, **component** and **ui**.
@@ -16,20 +16,10 @@ Any messaging to services or other components will be mocked or stubbed.
 These are high level tests to verify the user flow and interaction. A user flow could be filling out a multi-step form with ajax
 validation. UI tests verify the combination of many components together using the actual user interactions such as mouse clicks and keyboard interactions.
 
-### What can be tested and how?
-#### JavaScript class methods and functions
-Testing JavaScript only - without DOM - can be achieved with unit tests.
+## Testing-Strategy
+Try to cover as many tests with **unit tests** since unit tests are fast. TDD helps to achieve this.
 
-#### JavaScript classes together
-Still testing JavaScript only - without DOM - and these are now integration tests.
+When DOM is required you will write **component tests**. Testing with the DOM means you will either mock the DOM or use a headless browser such as [PhantomJS](http://phantomjs.org/) (and a [helper](http://casperjs.org/)) or Selenium using PhantomJS. There's a [list of headless web browsers](https://gist.github.com/evandrix/3694955) on Github.
 
-### #Module
-JavaScript, HTML and CSS combined - with DOM. These tests require a browser to test against the DOM, for example if the existance or change of html needs to be tested.
-
-### Unit and integration tests
-JavaScript on its own can be tested with unit tests. Unit tests are atomic and validate the functionality of a method or function. JavaScript and JavaScript - two or more module - that play together can be tested with integration tests.
-
-
-
-## References
+## Reference
 - <http://blogs.msdn.com/b/raulperez/archive/2010/04/29/unit-testing-component-level-testing-and-ui-testing-what-to-use-and-when.aspx>
