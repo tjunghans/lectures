@@ -7,6 +7,6 @@ The lectures are:
 - [Client Testing and Project Automation](https://github.com/tjunghans/lectures/blob/master/fe-testing/main.md)
 - [Deployment, Scaling & Performance](https://github.com/tjunghans/lectures/tree/master/fe-performance/main.md)
 
-The lecture notes and examples are in english since english is the language of the software and frontend developer. The lecture notes are written in markdown on Github so that they can be versioned and improved online, even by a participant or the community using [pull requests](https://help.github.com/articles/using-pull-requests).
+The lecture notes and examples are in english since english is the language of the software and frontend developer. The lecture notes are written in markdown on Github so that they can be versioned and improved online by myself as well as participants and the community using [pull requests](https://help.github.com/articles/using-pull-requests).
 
 If you have any questions feel free to contact me at thomas.junghans@gmail.com.
