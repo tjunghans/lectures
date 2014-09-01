@@ -50,13 +50,11 @@ We will write a simple `Time` library that can take hours and minutes as argumen
 - Mocha (Node or [in the browser](http://visionmedia.github.io/mocha/#browser-support))
 - Assert (Node Assert or [Chai Assert](http://chaijs.com/guide/styles/#assert) in the browser)
 
-To keep the example simple, no other libraries will be used. There is some boilerplate code below. The implementation of `Time` and the assertions are missing.
-
-Tip: Create a [fiddle](http://jsfiddle.net/).
+There is an example below.
 
 **HTML**
 
-(Yup, that's it!)
+(Yes, just one tag)
 
 ```html
 <div id="mocha"></div>
@@ -74,14 +72,51 @@ Tip: Create a [fiddle](http://jsfiddle.net/).
         return hours * 3600;
     }
 
-    // Constructor
-    function Time() {
+    function roundTwoDecimals(num) {
+        return Math.round(num * 100) / 100;
+    }
 
+    function secondsToHoursAndMinutes(seconds) {
+        var hours = (seconds / 3600);
+        var fullHours = Math.floor(hours);
+        var minutes = Math.round((hours - fullHours) * 60);
+        return {
+            hours: fullHours,
+            minutes: minutes
+        };
+    }
+
+    // Constructor
+    function Time(h, m) {
+        this.hours = Math.floor(h);
+
+        if (arguments.length === 1) {
+            this.minutes = roundTwoDecimals((h - this.hours) * 60);
+        } else {
+            this.minutes = m;
+        }
     }
 
     // Methods
     Time.prototype = {
-        constructor: Time
+        constructor: Time,
+        toSeconds: function () {
+            return this.hours * 3600 + this.minutes * 60;
+        },
+        toDays: function () {
+            return this.toSeconds() / 86400;
+        },
+        toWorkDays: function (workDayInHours) {
+            return roundTwoDecimals(this.toSeconds() / hoursToSeconds(workDayInHours));
+        },
+        add: function (time) {
+            var hoursAndMinutes = secondsToHoursAndMinutes(this.toSeconds() + time.toSeconds());
+
+            this.hours = hoursAndMinutes.hours;
+            this.minutes = hoursAndMinutes.minutes;
+
+            return this;
+        }
     };
 
     namespace.Time = Time;
@@ -93,33 +128,84 @@ mocha.setup('bdd');
 var assert = chai.assert;
 
 describe('Time', function () {
+    var t;
+
+    afterEach(function () {
+        t = null;
+    });
 
     it('has a constructor', function () {
-    	// assert.equal(true, true);
+        assert(new Time());
     });
 
     it('takes hours as argument', function () {
+        t = new Time(8.5);
 
+        assert.equal(t.hours, 8);
+        assert.equal(t.minutes, 30);
+
+        t = new Time(8.25);
+        assert.equal(t.hours, 8);
+        assert.equal(t.minutes, 15);
     });
 
     it('takes hours and optionally minutes as arguments', function () {
+        // Setup
+        var hours = 20;
+        var minutes = 30;
 
+        // Exercise
+        var t = new Time(hours, minutes);
+
+        // Verify
+        assert.equal(t.hours, hours);
+        assert.equal(t.minutes, minutes);
     });
 
     it('can return time in seconds', function () {
+        var t = new Time(20, 30);
 
+        assert.equal(t.toSeconds(), 73800);
+
+        t = new Time(1, 1);
+        assert.equal(t.toSeconds(), 3660);
     });
 
     it('can return time in days', function () {
+        var t = new Time(24, 0);
+
+        assert.equal(t.toDays(), 1);
+
+        t = new Time(12, 0);
+        assert.equal(t.toDays(), 0.5);
+
+        t = new Time(36, 0);
+        assert.equal(t.toDays(), 1.5);
+
+        t = new Time(5, 60);
+        assert.equal(t.toDays(), 0.25);
 
     });
 
     it('can return time in work days', function () {
+        var t = new Time(8.4);
 
+        assert.equal(t.toWorkDays(8.4), 1);
+
+        t = new Time(12);
+        assert.equal(t.toWorkDays(8.4), 1.43);
+
+        t = new Time(42);
+        assert.equal(t.toWorkDays(8.4), 5);
     });
 
     it('can add time', function () {
+        var t1 = new Time(8.4);
+        var t2 = new Time(8.4);
+        var t3 = new Time(12);
 
+        assert.equal(t1.add(t2).toWorkDays(8.4), 2);
+        assert.equal(t3.add(new Time(24)).toDays(), 1.5);
     });
 });
 
