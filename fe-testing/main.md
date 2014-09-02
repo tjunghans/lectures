@@ -13,12 +13,9 @@
 
 ### Practice
 
-- [Unit Test](articles/unit-test.md)
-- [Component Test](articles/component-test.md)
-- [UI Test](articles/ui-test.md)
-
+- [Unit Test with Mocha](articles/unit-test.md)
+- [Component Test with Selenium](articles/selenium.md)
 - [Tools](articles/tools.md)
-- [Selenium](articles/selenium.md)
 - [Automation](articles/automation.md)
 - [Exercises](articles/exercises.md)
 - [References](articles/references.md)
