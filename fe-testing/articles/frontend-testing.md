@@ -15,6 +15,7 @@ Any messaging to services or other components will be mocked or stubbed.
 **UI tests**
 These are high level tests to verify the user flow and interaction. A user flow could be filling out a multi-step form with ajax
 validation. UI tests verify the combination of many components together using the actual user interactions such as mouse clicks and keyboard interactions.
+UI tests can also be refered to as integration tests, because ui is tested with the backend.
 
 ## Testing-Strategy
 ### Unit Tests
