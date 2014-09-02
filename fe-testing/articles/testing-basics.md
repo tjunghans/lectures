@@ -53,8 +53,11 @@ function assert(statement, message) {
 ## Setup and Teardown / BeforeEach and AfterEach
 TDD and BDD test Suites know the setup/beforeEach and teardown/afterEach hooks. The 'setup'-hook is run before every test case and is used to prepare the code to be tested, such as instantiate a class, load dependencies and set configs. 'teardown' runs after each test case and cleans up through resetting, unsetting and unbinding, etc.
 
+## TDD
+See [TDD](./tdd.md)
+
 ## BDD
-Behaviour Driven Development is...
+See [BDD](./bdd.md)
 
 Next:
 [Frontend Testing](frontend-testing.md)
