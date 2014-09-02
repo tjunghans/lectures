@@ -10,16 +10,6 @@ In the book [Test-Driven Development by Example](http://www.amazon.com/dp/032114
 >4. Run all tests and see them all succeed.
 >5. Refactor to remove duplication.
 
-A first assertion will check if the method is available. A second may test for the correct arguments. Another for the expected return value and so on. Writing assertions step by step and only writing the minimum amount of code to make the test go green, will keep the production code lean. Less code means less to debug and improved readability.
-
-## Writing better unit tests
-In the last chapter of his book [Test-Driven JavaScript Development](http://www.tddjs.com), Christian Johansen has tips on writing better unit tests.
-
-- Improve readability by clearly stating the intent of the test.
-- Keep tests small and simple. This also goes for production code.
-- A good test suite (collection of unit tests) should serve as a documentation for the production code being tested.
-- Name the test clearly. If you are using bdd then keep the requirement as short and precise. eg. "it should `verb goes here` something".
-
 Further reading:
 - http://www.agiledata.org/essays/tdd.html
 - http://en.wikipedia.org/wiki/Test-driven_development

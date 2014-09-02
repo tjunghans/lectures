@@ -8,12 +8,21 @@ BDD **describes** a component and what **it should** be able to do by stating **
 User story example:
 "As a calculator I want to be able to add two numbers, so that the return value is the sum of the two numbers."
 
-Example:
+Example of a unit test with BDD vocabulary:
 ```javascript
 describe("Calculator", function() {
   it("should add two numbers", function() {
-    expect(2 + 2).toBe(4);
+    var calc = new Calculator();
+    expect(calc.add(2, 2)).toBe(4);
   });
+});
+```
+Example of a unit test with xunit vocabulary (using [QUnit](http://qunitjs.com/)):
+```javascript
+QUnit.module("Calculator");
+QUnit.test("method add", function( assert ) {
+  var calc = new Calculator();
+  assert.equal(calc.add(2, 2) , 4);
 });
 ```
 Further reading:
