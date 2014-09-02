@@ -45,18 +45,28 @@ function add(a, b) {
 	return Number(a) + Number(b);
 }
 
+var addend1 = $('input.addend1');
+var addend2 = $('input.addend2');
+var sum = $('span.sum');
+
 btn.addEventListener('click', function () {
     sum.textContent = add(addend1.value, addend2.value);
 });
 ```
-In the above snippet, the addition logic has been moved to its own function `add` with two arguments. The function `add` can be reused and tested.
+The following changes were made above:
+- the DOM access has been moved out of the handler
+- the addition logic has been moved out of the listener and into its own function `add`
+
+The function `add` can be reused and tested:
 
 ```javascript
 assert.equal(add(1, 2), 3); // true
 assert.equal(add("1", "2"), 3); // true
 ```
+Notice how the readability of the listener has been improved as well.
 
-Of course the above is a very simple example and more assertions could be added to test against the number of arguments suplied or argument types. The second snippet shows how code becomes testable through separation of concerns and also improving the readability and usability.
+The above is a simple example. The handler could be decoupled even more.
+More assertions could be added to test against the number of arguments suplied or argument types.
 
 ### References
 - <http://alistapart.com/article/writing-testable-javascript/>
