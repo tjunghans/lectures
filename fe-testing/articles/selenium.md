@@ -43,7 +43,6 @@ This is a step by step guide to get Webdriver.io up and running.
 ## Webdriver.io, Node, Assert and Mocha
 
 https://github.com/tjunghans/learning-webdriverjs
-asd
 
 
 

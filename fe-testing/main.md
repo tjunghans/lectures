@@ -10,13 +10,13 @@
 - [Writing testable JavaScript](articles/writing-testable-javascript.md)
 - [Behaviour Driven Testing (BDD)](articles/bdd.md)
 - [Test Driven Development (TDD)](articles/tdd.md)
+- [Tools](articles/tools.md)
 
 ### Practice
 
 - [Unit Test with Mocha](articles/unit-test.md)
 - [Component Test with Selenium](articles/selenium.md)
-- [Tools](articles/tools.md)
-- [Automation](articles/automation.md)
+- [Automation with NPM and Makefile](articles/automation.md)
 - [Exercises](articles/exercises.md)
 - [References](articles/references.md)
 
