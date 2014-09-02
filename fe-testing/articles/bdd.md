@@ -16,7 +16,7 @@ describe("Calculator", function() {
   });
 });
 ```
-Further reading on BDD:
+Further reading:
 - https://pythonhosted.org/behave/philosophy.html
 - http://en.wikipedia.org/wiki/Behavior-driven_development
 - http://www.ryangreenhall.com/articles/bdd-by-example.html

@@ -3,15 +3,20 @@
 > As rich Web application complexity grows, if you want to keep your sanity, you need to unit test your frontend JavaScript code.
 
 ## Agenda
+### Theory
 - [Introduction](articles/introduction.md)
-- [Tesing Vocabulary](articles/testing-vocabulary.md)
+- [Testing Vocabulary](articles/testing-vocabulary.md)
 - [Frontend Testing](articles/frontend-testing.md)
 - [Writing testable JavaScript](articles/writing-testable-javascript.md)
+- [Behaviour Driven Testing (BDD)](articles/bdd.md)
+- [Test Driven Development (TDD)](articles/tdd.md)
+
+### Practice
+
 - [Unit Test](articles/unit-test.md)
 - [Component Test](articles/component-test.md)
 - [UI Test](articles/ui-test.md)
-- [Behaviour Driven Testing (BDD)](articles/bdd.md)
-- [Test Driven Development (TDD)](articles/tdd.md)
+
 - [Tools](articles/tools.md)
 - [Selenium](articles/selenium.md)
 - [Automation](articles/automation.md)

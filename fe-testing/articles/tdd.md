@@ -19,3 +19,8 @@ In the last chapter of his book [Test-Driven JavaScript Development](http://www.
 - Keep tests small and simple. This also goes for production code.
 - A good test suite (collection of unit tests) should serve as a documentation for the production code being tested.
 - Name the test clearly. If you are using bdd then keep the requirement as short and precise. eg. "it should `verb goes here` something".
+
+Further reading:
+- http://www.agiledata.org/essays/tdd.html
+- http://en.wikipedia.org/wiki/Test-driven_development
+- http://martinfowler.com/articles/is-tdd-dead/
