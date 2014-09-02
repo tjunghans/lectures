@@ -1,28 +1,41 @@
 ## Writing testable JavaScript
-Writing tests at any level - unit, component or ui - can be very difficult when the JavaScript ist not written testable. Testable JavaScript can be enforced by writing tests first, which is one of the advantages of tdd. Testable JavaScript consists of many small methods or functions instead of one large one. Testable JavaScript tends to have a higher readability and is easier to understand. It is easier to read and understand a method, that has less then 10 lines of code and you don't have to scroll.
-Testable JavaScript embraces [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns) with code for model, view and controller. It is easier to write tests for controllers containing business logic than tests for the view, with DOM interaction.
+Writing tests at any level - unit, component or ui - can be very difficult when the JavaScript ist not written testable. Testable JavaScript can be enforced by writing tests first, which is one of the advantages of tdd. Testable JavaScript consists rather of many small methods or functions instead of one large one.
+
+> "If you ever find yourself retrofitting a test suite onto an existing application that was not written with testing in mind, you’ll invariably discover that parts of the application will be challenging, if not impossible, to test."
+
+Source: http://tddjs.com
+
+Testable JavaScript is...
+- loosely coupled
+- tends to have a higher readability
+- tends to be easier to understand
+- embraces [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns) (applies MVC)
 
 Here is a JavaScript snippet that smells ([JsFiddle](http://jsfiddle.net/tangibleJ/x8gsc34j/#base)):
 
 ```javascript
+// Alias
 function $(selector) {
     return document.querySelector(selector);
 }
 
 var btn = $('button.add');
-var addend1 = $('input.addend1');
-var addend2 = $('input.addend2');
-var sum = $('span.sum');
 
 btn.addEventListener('click', function () {
-    sum.textContent = Number(addend1.value) + Number(addend2.value);
+	var addend1 = $('input.addend1');
+	var addend2 = $('input.addend2');
+	var sum = $('span.sum');
+	sum.textContent = Number(addend1.value) + Number(addend2.value);
 });
 
 ```
-In the above snippet the part that smells the most is the event listener:
-- There's no way to access the addition logic.
-- Tight coupling between DOM and logic.
-- The addition logic cannot be reused.
+The above code smells:
+- There is no way to test the addition logic without the DOM
+- The addition logic cannot be reused (tight coupling)
+- The event handler does more than one thing:
+	+ Reads data from inputs
+	+ executes addition
+	+ saves data to sum input
 
 Here is a better example that is easier to test ([JsFiddle](http://jsfiddle.net/tangibleJ/x8gsc34j/5/)):
 
