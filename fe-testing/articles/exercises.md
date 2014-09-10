@@ -18,3 +18,4 @@ Study [Substack's post on automation with Makefile and NPM run](http://substack.
 1. Study **Spies** and **Stubs**. Stubs and spies are almost the same, except that stubs deactivate the original functionality of the stubbed method. You can ignore mocks for now.
 2. Study **Fake time** and **Testing Ajax**.
 
+[Simple JSFiddle example](http://jsfiddle.net/tangibleJ/ynL7x1y0/)
