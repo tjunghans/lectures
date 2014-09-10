@@ -24,4 +24,4 @@ This course makes heavy use of theory and examples from [Test-Driven JavaScript 
 There are further references to articles and books throughout the course and also on the [Reference page](./references.md).
 
 ## Next
-[Testing Basics](testing-basics.md)
+[Testing Basics](testing-vocabulary.md)
